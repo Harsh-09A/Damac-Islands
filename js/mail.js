@@ -1,7 +1,6 @@
 (function () {
-  emailjs.init({
-    publicKey: "BnRoAjGd5ec2E2VQn",
-  });
+  // emailjs.init("to9PlFrMMimgruuH0");
+  emailjs.init("BwX8mmKlFidsWvP67");
 })();
 
 // Get IP Address
@@ -18,22 +17,17 @@ async function getIpAddress() {
 }
 
 // Form Submit
-const handleFormSubmit = async (
-  formId,
-  nameField,
-  emailField,
-  phoneField,
-  privacyField
-) => {
+const handleFormSubmit = async (formId, nameField, emailField, phoneField) => {
   const templateParams = {
     user_name: document.getElementById(nameField).value,
     user_email: document.getElementById(emailField).value,
-    contact_number: document.getElementById(phoneField).value,
-    privacy_check: document.getElementById(privacyField).value,
+    // contact_number: document.getElementById(phoneField).value,
+    contact_number: `${phoneField.getNumber()}`,
     ip_address: await getIpAddress(),
-    website_url: window.location.href,
+    // to_email: "Hauteleads@gmail.com ",
     to_email: "harsh.autowebbed@gmail.com",
-    company_name: "{Project Name}",
+    company_name: "Damac Islands",
+    website_url: window.location.href,
   };
 
   // Send Form
@@ -62,8 +56,8 @@ window.onload = function () {
         "contact-form",
         "user_name",
         "user_email",
-        "contact_number",
-        "privacy_check"
+        // "contact_number"
+        iti
       );
     });
 
@@ -75,8 +69,8 @@ window.onload = function () {
         "contact-form-modal",
         "user_name_modal",
         "user_email_modal",
-        "contact_number_modal",
-        "privacy_check_modal"
+        // "contact_number_modal"
+        itiModal
       );
     });
 };

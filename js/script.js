@@ -20,3 +20,17 @@ function toggleContent(dotsId, moreTextId, btnId) {
 $(".hover").mouseleave(function () {
   $(this).removeClass("hover");
 });
+
+const phoneInput = document.querySelector("#contact_number");
+// Initialize intlTelInput
+const iti = window.intlTelInput(phoneInput, {
+  initialCountry: "ae",
+  separateDialCode: true,
+});
+
+const phoneInputModal = document.querySelector("#contact_number_modal");
+// Initialize intlTelInput
+const itiModal = window.intlTelInput(phoneInputModal, {
+  initialCountry: "ae",
+  separateDialCode: true,
+});

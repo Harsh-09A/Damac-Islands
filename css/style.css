@@ -94,7 +94,7 @@ main {
   #slider_section .carousel-item .banner1 {
     content: url("../img/banners/mobile_banner1.jpg");
   }
-  #slider_section.carousel-item .banner2 {
+  #slider_section .carousel-item .banner2 {
     content: url("../img/banners/mobile_banner2.jpg");
   }
 }

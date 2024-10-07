@@ -24,6 +24,10 @@ html {
   --colorWhite: #ffffff;
   --colorTheme: #33718b;
   --colorBackgroundBlack: #000000bd;
+  --colorHalfBlack: #333333;
+  --colorBackgroundBlack: #343a40bd;
+  --colorBackgroundOverlay: #00000070;
+  --colorWhiteOverlay: rgba(212, 210, 212, 1);
 }
 
 /* Navbar Starts */
@@ -324,5 +328,156 @@ main {
   #amenities_section .carousel {
     /* padding: 2em; */
     font-size: 1.3em;
+  }
+}
+
+/* InfoBox */
+.info-box {
+  padding-bottom: 20px;
+  color: var(--colorBlack);
+}
+.info-status {
+  font-size: 1.1em;
+  text-shadow: 0 1px 2px var(--colorHalfBlack);
+  background-color: var(--colorPrimary);
+  display: block;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
+}
+
+.info-title {
+  font-size: 1.9em;
+  font-weight: 600;
+  padding: 1.2vw 0.8vw 0.3vw;
+}
+
+.info-location {
+  font-size: 1em !important;
+}
+
+/* Color Card */
+.card-d {
+  width: 95%;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.info-box span.heading2 {
+  font-weight: 400;
+  width: 10em !important;
+  display: inline-block;
+}
+.info-box span.heading1,
+.info-box span.heading2 {
+  text-align: left;
+  vertical-align: top;
+  font-size: 1.2em;
+}
+.info-box span.heading1 {
+  font-weight: 700;
+  width: 10em !important;
+  display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  .info-box span.heading1,
+  .info-box span.heading2 {
+    font-size: 1em;
+    width: 8em !important;
+  }
+}
+
+/* Offer Box */
+.of-box {
+  font-size: 15px;
+  width: 95%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  font-weight: 700;
+  text-align: center;
+
+  padding: 8px;
+}
+
+.offer-text {
+  display: block;
+  font-size: 0.9em !important;
+  color: var(--colorWhite);
+  border: 2px dashed var(--colorWhite);
+  padding: 10px 5px;
+}
+
+/* Tagline & Price */
+.info-tag-line {
+  display: block;
+  padding: 0.1vw 0.8vw;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  line-height: 0.9em;
+  text-align: center;
+  margin-top: 10px;
+}
+.info-price {
+  display: block;
+  text-align: center;
+  padding: 0.1vw 0.8vw 0.3vw;
+  font-size: 2em;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 28px;
+}
+.offer-bg-animation {
+  color: var(--colorWhite);
+  display: block;
+  background: linear-gradient(
+    -45deg,
+    var(--colorPrimary),
+    var(--colorSecondary),
+    var(--colorPrimary),
+    var(--colorSecondary)
+  );
+  background-size: 400% 400%;
+  -webkit-animation: 3s infinite Gradient;
+  -moz-animation: 3s infinite Gradient;
+  animation: 3s infinite Gradient;
+}
+
+/*  */
+/* For Desktop */
+/* InfoBox */
+@media only screen and (min-width: 990px) {
+  .info-box {
+    color: var(--colorWhite);
+    width: 30vw;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    z-index: 9;
+    margin-top: 7em;
+    padding-bottom: 1.5vw;
+    display: inline-block;
+    background-color: var(--colorBackgroundOverlay);
+    border-radius: 0 50px;
+    border: 3px solid var(--colorBorderWhite); /*gradient Border animation */
+    /* padding-top: 1.5vw; */
+  }
+
+  .info-status {
+    border-radius: 0 50px 0 0;
+  }
+
+  .info-box .info-title {
+    font-size: 1.5em;
+    padding: 5px 3px 5px;
+    color: var(--colorWhite);
+  }
+  .info-location {
+    font-size: 0.9em;
+    padding: 0;
+    margin: 0;
   }
 }

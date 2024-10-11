@@ -34,3 +34,10 @@ const itiModal = window.intlTelInput(phoneInputModal, {
   initialCountry: "ae",
   separateDialCode: true,
 });
+
+// Popup Auto
+$(window).ready(function () {
+  setTimeout(function () {
+    $("#popupModal").modal("show");
+  }, 3000);
+});

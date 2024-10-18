@@ -1,6 +1,6 @@
 (function () {
-  // emailjs.init("to9PlFrMMimgruuH0");
-  emailjs.init("BwX8mmKlFidsWvP67");
+  emailjs.init("to9PlFrMMimgruuH0");
+  // emailjs.init("BwX8mmKlFidsWvP67");
 })();
 
 // Get IP Address
@@ -24,8 +24,8 @@ const handleFormSubmit = async (formId, nameField, emailField, phoneField) => {
     // contact_number: document.getElementById(phoneField).value,
     contact_number: `${phoneField.getNumber()}`,
     ip_address: await getIpAddress(),
-    // to_email: "Hauteleads@gmail.com ",
-    to_email: "harsh.autowebbed@gmail.com",
+    to_email: "Hauteleads@gmail.com ",
+    // to_email: "harsh.autowebbed@gmail.com",
     company_name: "Damac Islands",
     website_url: window.location.href,
   };

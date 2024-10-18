@@ -15,12 +15,7 @@ function toggleContent(dotsId, moreTextId, btnId) {
   }
 }
 
-// amenities
-
-$(".hover").mouseleave(function () {
-  $(this).removeClass("hover");
-});
-
+// International Input
 const phoneInput = document.querySelector("#contact_number");
 // Initialize intlTelInput
 const iti = window.intlTelInput(phoneInput, {
